@@ -66,7 +66,7 @@ public class Main {
         System.out.println(prodottiBooks);
 
         System.out.println("----------------- ESERCIZIO 2 ----------------------");
-        List<Order> prodottiBaby = listaOrdini.stream().filter(product -> product.getProducts().stream().allMatch(category -> category.getCategory().equals("Baby"))).toList();
+        List<Order> prodottiBaby = listaOrdini.stream().filter(product -> product.getProducts().stream().anyMatch(category -> category.getCategory().equals("Baby"))).toList();
         System.out.println(prodottiBaby);
         System.out.println("----------------- ESERCIZIO 3 ----------------------");
         List<Product> prodottiBoys1 = products.stream().filter(category -> category.getCategory().equals("Boys")  ).toList();
